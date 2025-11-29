@@ -1,0 +1,30 @@
+{
+    "name": "e-commerce-fullstack",
+    "version": "1.0.0",
+    "description": "Full-stack E-commerce Application with React Frontend, Admin Panel, and Node.js Backend",
+    "main": "index.js",
+    "scripts": {
+        "install-all": "npm install && cd backend && npm install && cd ../Frontend && npm install && cd ../admin && npm install",
+        "start": "concurrently \"npm run backend\" \"npm run frontend\" \"npm run admin\" --names \"BACKEND,FRONTEND,ADMIN\" --prefix-colors \"cyan,green,yellow\"",
+        "dev": "concurrently \"npm run dev-backend\" \"npm run frontend\" \"npm run admin\" --names \"BACKEND,FRONTEND,ADMIN\" --prefix-colors \"cyan,green,yellow\"",
+        "start-backend": "cd backend && npm start",
+        "start-frontend": "cd Frontend && npm start",
+        "start-admin": "cd admin && npm start",
+        "dev-backend": "cd backend && npm run dev",
+        "backend": "npm run start-backend",
+        "frontend": "npm run start-frontend",
+        "admin": "npm run start-admin"
+    },
+    "keywords": [
+        "ecommerce",
+        "react",
+        "nodejs",
+        "express",
+        "mongodb"
+    ],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^9.2.1"
+    }
+}
